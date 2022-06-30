@@ -1,12 +1,17 @@
-const containerSimplebar = document.querySelectorAll('[data-simplebar]')
+window.onload = function cardsLoad() {
+  const containerSimplebar = document.querySelectorAll('.dropdown__simplebar')
+  containerSimplebar.forEach(
+    function(container) {
+      new SimpleBar(container, {
+        scrollbarMaxSize: 30,
+        autoHide: false,
+    })
+  }
+  )
 
-
-containerSimplebar.forEach(
-  function(container) {
-    new SimpleBar(container, {
-      scrollbarMaxSize: 30,
-      autoHide: false,
-      forceVisible: true|'x'|'y',
+  const burgerNavSimplebar = document.querySelector('.burger-nav__simplebar')
+  new SimpleBar( burgerNavSimplebar, {
+    scrollbarMaxSize: 30,
+    autoHide: false,
   })
-}
-)
+};

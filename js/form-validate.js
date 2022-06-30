@@ -5,7 +5,8 @@ im.mask(selector);
 const validation = new JustValidate('#formd', {
   errorFieldCssClass: 'invalid-contact-form',
   errorLabelStyle: {
-    fontSize: '16px',
+    fontSize: '12px',
+    fontFamily: 'OpenSans',
     color: '#444443',
   },
   focusInvalidField: true,

@@ -1,7 +1,6 @@
 
 class Paginator {
   constructor(options) {
-    console.log(options)
     this.paginatorItems = document.querySelectorAll(options["container"])
     this.allItemsNum = this.paginatorItems.length
     this.paginatorContainer = document.querySelector(options["paginatorContainer"])

@@ -1,8 +1,6 @@
 document.addEventListener('click', function(e) {
   if (!(e.target.closest('.styles__items') || e.target.closest('.cards'))) {
-    styles.allHide()
-    if (e.target.closest('.paginator__left-icon')) {galerySwipe.previous()}
-    if (e.target.closest('.paginator__right-icon')) {galerySwipe.next()}
+    styles._allHide()
     if (e.target.closest('.authors__name')) {active_author(e)}
     if (e.target.className == 'events__button') { eventsShow() }
   }
