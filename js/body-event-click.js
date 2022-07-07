@@ -17,4 +17,5 @@ dropdownGalleryClose.addEventListener('click', function(el) {
     e.classList.remove('item-drop-gallery_active')
   })
   document.querySelector(".gallery__gallery-dropdown").classList.remove("gallery-dropdown__active")
+  document.querySelector('body').classList.remove('body_no-scroll')
 })

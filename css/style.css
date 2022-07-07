@@ -95,6 +95,11 @@ body {
   background-color: var(--color-background-body);
 }
 
+.body_no-scroll {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .is-active {
   visibility: visible !important;
   opacity: 1 !important;
@@ -743,17 +748,20 @@ overflow: hidden;
 
 .gallery__gallery-dropdown {
   z-index: 10;
-  position: absolute;
-  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: var(--dropdown-gallery-background);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility  0.3s ease-out;
 }
 
 .gallery-dropdown__active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .gallery-dropdown__items {
@@ -1664,8 +1672,8 @@ overflow: hidden;
 
 .events__full-paginator_left {
   z-index: 2;
-  left: 123px;
-  top: 46.4%;
+  left: 134px;
+  top: 48.8%;
   transform: rotate(180deg);
 }
 
@@ -1869,6 +1877,9 @@ overflow: hidden;
 
 .tooltip-clue-container {
   position: relative;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .tooltip-clue-container {
@@ -2243,7 +2254,7 @@ overflow: hidden;
   transition: border .3s, color .3s, background-color .3s;
 }
 
-.paform-contacts__btn-contacts:after {
+.form-contacts__btn-contacts:after {
   content: "";
   position: absolute;
   left: -7px;
@@ -2255,26 +2266,26 @@ overflow: hidden;
   transition: border .3s;
 }
 
-.paform-contacts__btn-contacts:focus-visible::after{
+.form-contacts__btn-contacts:focus-visible::after{
   border: 2px solid var(--license-link-color);
 }
 
-.paform-contacts__btn-contacts:hover {
+.form-contacts__btn-contacts:hover {
   background-color: var(--color-btn-hero);
   color: var(--white-text);
 }
 
-.paform-contacts__btn-contacts:active {
+.form-contacts__btn-contacts:active {
   border-color: var(--picture-active);
   color: var(--white-text);
   background-color: var(--accordion-active-border);
 }
 
-.paform-contacts__btn-contacts:hover::after {
+.form-contacts__btn-contacts:hover::after {
   border: 2px solid transparent;
 }
 
-.paform-contacts__btn-contacts:active::after {
+.form-contacts__btn-contacts:active::after {
   border: 2px solid transparent;
 }
 
@@ -2391,13 +2402,13 @@ overflow: hidden;
 .vk__logo:hover path,
 .instagram__logo:hover path,
 .facebook__logo:hover path {
-  fill: var(--white-text);
+  fill: var(--white-text) !important;
 }
 
 .vk__logo:active path,
 .instagram__logo:active path,
 .facebook__logo:active path {
-  fill: var(--color-btn-hero);
+  fill: var(--color-btn-hero) !important;
 }
 
 /* end footer */

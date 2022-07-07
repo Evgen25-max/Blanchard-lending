@@ -91,6 +91,13 @@ const swiperEvents1 = new Swiper(".events__swiper", {
       prevEl: ".events__full-paginator_left",
       disabledClass : 'events-pagi-disabled',
     },
+    on: {
+      resize: function () {
+        swiperEvents1.pagination.init();
+        swiperEvents1.pagination.render();
+        swiperEvents1.pagination.update();
+      },
+    },
 
     breakpoints: {
       // when window width is >= 320px
@@ -128,6 +135,7 @@ const swiperEvents1 = new Swiper(".events__swiper", {
           el: ".swiper-pagination-events",
           type: 'bullets',
           clickable: true,
+          enable: true,
           bulletClass: "swiper-events-bullet ",
           bulletActiveClass: "swiper-events-bullet-active",
           horizontalClass: "swiper-events-bullet-horizontal"

@@ -52,7 +52,6 @@ function mobileClick_remove () {
 }
 
 
-
 function searchClick() {
   searchBtn = document.querySelector('.search__btn')
   searchInput = document.querySelector('.search__input')
