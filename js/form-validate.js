@@ -50,3 +50,6 @@ validation
       errorMessage: 'Телефон неправильный',
     }
   ])
+ .onSuccess((ev) => {
+    document.querySelector('.contacts__form-contacts').submit()
+  });
